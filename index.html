@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Pathucuz 🤗</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="shortcut icon" href="images/icon.png">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				
+
+
+				<!-- Header -->
+				<div class="left-image">
+					<h1 id="trigger" href="javascript:void(0);"><a href="#login">Mulai</a></h1>
+				</div>
+
+				<!-- Main -->
+					<div id="main">
+
+						
+
+							<article id="login">
+								<h6 class="major">Selamat datang</h6>
+						
+								<section>
+									
+									<div class="container">
+										<form action="letter.html">
+										  <div class="error-text"></div>
+										  <div class="field half">
+											<input onkeyup="active()" href= "#header" id="pswrd_1" type="password" placeholder="Ketik usernamenya 😊">
+										  </div>
+										  <div class="field half">
+											<input onkeyup="active_2()" href= "#header" id="pswrd_2" disabled type="password" placeholder="Ketik passwordnya 😚">
+										  </div>
+										  <button disabled>Enter</button>
+										</form>
+									  </div>
+								  
+									  <script>
+										const pswrd_1 = document.querySelector("#pswrd_1");
+										const pswrd_2 = document.querySelector("#pswrd_2");
+										const errorText = document.querySelector(".error-text");
+										const btn = document.querySelector("button");
+										const anu = document.querySelector("li");
+										function active(){
+										  if(pswrd_1.value.length >= 8){
+											btn.removeAttribute("disabled", "");
+											btn.classList.add("active");
+											pswrd_2.removeAttribute("disabled", "");
+										  }else{
+											btn.setAttribute("disabled", "");
+											btn.classList.remove("active");
+											pswrd_2.setAttribute("disabled", "");
+										  }
+										}
+										 
+  
+										btn.onclick = function(){											
+										  if((pswrd_1.value == "rainlovy") && (pswrd_2.value == "20042006")){
+											errorText.style.display = "block";
+											errorText.classList.remove("matched");
+											errorText.textContent = "Akses diterima";
+										  }else{
+											errorText.style.display = "block";
+											errorText.classList.add("matched");
+											errorText.textContent = "Akses ditolak";
+											return false;
+										  }
+										}
+										function active_2(){
+										  if(pswrd_2.value == "20042006"){
+											showBtn.style.display = "none"
+										  } else {
+											showBtn.style.display = "block";
+											showBtn.onclick = function(){
+											  if((pswrd_1.type == "password") && (pswrd_2.type == "password")){
+												pswrd_1.type = "text";
+												pswrd_2.type = "text";
+												this.textContent = "Hide";
+												this.classList.add("active");
+											  }else{
+												pswrd_1.type = "password";
+												pswrd_2.type = "password";
+												this.textContent = "Show";
+												this.classList.remove("active");
+											  }
+											}
+										  }
+										}
+									  </script>
+								</section>
+	
+							</article>
+							
+	
+
+						
+							
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy;<a href="licence.html">Sateula licence</a>. Design by <a href="https://t.me/pathucuz">Pathucuz (Path you choose)</a></p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bgk"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+	</body>
+</html>
